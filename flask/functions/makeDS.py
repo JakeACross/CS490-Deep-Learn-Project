@@ -28,6 +28,3 @@ def face_dataset_generator(name):
         
     camera.release()
     cv2.destroyAllWindows()
-
-def createModel():
-    pass

@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-from functions.makeMdl import *
+from flask import Flask, render_template, request, redirect
+from functions.makeDS import *
 from functions.faceRec import *
 from os import listdir
 
@@ -16,13 +16,15 @@ def makeMdl():
     user_name = request.form['name']
     for folder_name in listdir('../New Faces'):
         if folder_name == user_name: 
-            return render_template("faceRec.html")
+            return redirect('/faceRec')
     face_dataset_generator(user_name)
-    return render_template("faceRec.html")
+    return redirect('/faceRec')
 
     
 @app.route("/faceRec")
 def faceRec():
+    model = loadMdl()
+
     return render_template("faceRec.html")
     
 if __name__ == "__main__":
