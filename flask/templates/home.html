@@ -6,11 +6,10 @@
   </head>
   <body>
     <h1> Welcome to Our Face Recognition Project </h1>
-    <strong><nav>
-      <ul class="menu">
-        <li><a href="{{ url_for('makeMdl') }}">Take your pictures</a></li>
-        <li><a href="{{ url_for('faceRec') }}">Face Recognition</a></li>
-      </ul>
-    </nav></strong>
+    <form action="/" method="POST">
+      <label>Your name:</label>
+      <input type="text" id="name" name="name">
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>

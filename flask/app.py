@@ -1,7 +1,10 @@
-from flask import Flask, render_template
+from crypt import methods
+from flask import Flask, render_template, request
 import cv2
 import os
 from pathlib import Path
+
+from requests import post
 
 app = Flask(__name__)
 
@@ -9,11 +12,12 @@ app = Flask(__name__)
 def home():
     return render_template("home.html")
 
-@app.route("/makeMdl")
+
+@app.route("/", methods=["POST"])
 def makeMdl():
     image_count = 145
     image_path = '../New Faces'
-    user_name = 'Test'
+    user_name = request.form['name']
     Path('{}/{}'.format(image_path, user_name)).mkdir(parents=True, exist_ok=True)
     camera = cv2.VideoCapture(0)
 
@@ -37,7 +41,8 @@ def makeMdl():
         
     camera.release()
     cv2.destroyAllWindows()
-    return render_template("makeMdl.html")
+    return render_template("faceRec.html")
+
     
 @app.route("/faceRec")
 def faceRec():
