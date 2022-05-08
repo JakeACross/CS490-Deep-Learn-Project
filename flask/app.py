@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, Response
 from functions.makeDS import *
 from functions.faceRec import *
 from os import listdir
@@ -14,18 +14,22 @@ def home():
 @app.route("/", methods=["POST"])
 def makeMdl():
     user_name = request.form['name']
-    for folder_name in listdir('../New Faces'):
+    for folder_name in listdir('Face Dataset'):
         if folder_name == user_name: 
             return redirect('/faceRec')
     face_dataset_generator(user_name)
     return redirect('/faceRec')
-
     
 @app.route("/faceRec")
 def faceRec():
     model = loadMdl()
-    setUpSource(model)
-    return render_template("faceRec.html")
+    func = faceRecognition('Jake Cross', model)
+    return Response(func,
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+    if func:
+        return render_template("success.html")
+    else:
+        return redirect('/')
     
 if __name__ == "__main__":
     app.run(debug=True)
