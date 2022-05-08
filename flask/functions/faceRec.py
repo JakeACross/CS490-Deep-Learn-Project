@@ -11,6 +11,18 @@ import matplotlib.pyplot as plt
 
 from os import listdir
 
+def preprocess_image(image):
+    img = img_to_array(image)
+    img = np.expand_dims(img, axis=0)
+    
+    img = preprocess_input(img)
+    return img
+
+def findCosineDistance(source, test):
+    a = np.matmul(np.transpose(source), test)
+    b = np.sum(np.multiply(source, source))
+    c = np.sum(np.multiply(test, test))
+    return 1 - (a / (np.sqrt(b) * np.sqrt(c)))
 
 def loadMdl():
     # Create a CNN 
