@@ -2,13 +2,13 @@ import cv2
 from pathlib import Path
 
 def face_dataset_generator(name):
-    image_count = 145
-    image_path = '../New Faces'
+    image_count = 1
+    image_path = 'Face Dataset'
     user_name = name
     Path('{}/{}'.format(image_path, user_name)).mkdir(parents=True, exist_ok=True)
     camera = cv2.VideoCapture(0)
 
-    while image_count <= 150:
+    while image_count <= 15:
         result, image = camera.read()
 
         if result:

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from functions.makeDS import *
 from functions.faceRec import *
 from os import listdir
@@ -24,7 +24,7 @@ def makeMdl():
 @app.route("/faceRec")
 def faceRec():
     model = loadMdl()
-
+    setUpSource(model)
     return render_template("faceRec.html")
     
 if __name__ == "__main__":
