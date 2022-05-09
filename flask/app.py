@@ -28,12 +28,12 @@ def faceRec():
     return Response(func,
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
-@app.route("/logIn", methods=['GET', 'POST'])
+@app.route("/logIn")
 def logIn():
     f = open('result.txt', 'r')
     result = f.readline()
     if result == "Authorized": 
-        return render_template('success.html')
+        return render_template('user.html')
     else:
         return render_template('home.html')
     
