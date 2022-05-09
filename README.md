@@ -13,7 +13,8 @@
 This is the main file to run after the dataset the user wants to use is created. This file not only
 creates the second model for facial recognition, but also contains the OpenCV facial verification and
 an proof of concept of implementing security using this system. 
-  Firstly, to discuss the model. It utilizes the VGG Face dataset to train the model. 
+
+Firstly, to discuss the model. It utilizes the VGG Face dataset to train the model. 
 This was done to try to fix the main issues we noticed with the first model (FR TL Model). (See paragraph [1]).
 The structure of this model is very similar to a standard VGG16 model with the first five blocks of layers
 mirroring a VGG16 model. The final block of layers results in an output equal to the number of facial
@@ -21,14 +22,17 @@ structures in the VGG Face dataset, which was 2622. Doing this creates a opportu
 more options to pick from when predicting faces. So, instead of just being able to predict the facial structures
 of the people within the 'New Faces' dataset, it assigns the user faces to faces within the VGG Face dataset.
 This effectively eliminated the issue of unauthorized users being predicted as authorized users within the system.
-  After the model is loaded, then the program opens up a web camera for OpenCV to detect the user's face. It then
+
+After the model is loaded, then the program opens up a web camera for OpenCV to detect the user's face. It then
 tries to predict which face it is currently detecting. If the user is an authorized user, then their name is 
 displayed next to them. If the user is an unauthorized user, then 'Unauthorized user' is displayed above them.
-  Lastly, a simple security measure was implemented as a proof of concept. If the model determines the current
+  
+Lastly, a simple security measure was implemented as a proof of concept. If the model determines the current
 user is an authorized user, then a text file is decoded and outputted to the user. However, if the model
 determines the user is an unauthorized user, then the text file remains encrypted and outputted as a bunch of
 random characters that the user would not be able to decipher.
-  [1]The first model (from FR Keras program) was predicting authorized user faces pretty well, but struggled with 
+
+[1]The first model (from FR Keras program) was predicting authorized user faces pretty well, but struggled with 
 predicting unknown faces. There are a number of reasons why this might have been an issue. Even though we 
 took lots of measures to prevent this, the first model could have been due to overfitting. This issue could have 
 also been due to the relatively low number of images that were trained to each face. Also, the original model
@@ -36,8 +40,8 @@ could only predict outcomes equal to the number of people within the dataset. We
 for the predictions, but were still left issues. Unfortunately, we ran out of time to try to come up 
 with more solutions for the first model, so we created a second model within this main file using a much
 larger dataset.
-***Note: A new user
-only needs to run the OpenCV FR Dataset Generation file to see this model in action. Alternatively, 
+
+***Note: A new user only needs to run the OpenCV FR Dataset Generation file to see this model in action. Alternatively, 
 the user could also run the flask web application.***
 
 ### OpenCV FR Dataset Generation:
