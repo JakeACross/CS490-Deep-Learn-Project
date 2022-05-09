@@ -28,7 +28,7 @@ test data as validation data. This model would be saved to the user's machine.
 ### FR Image Folders to Train_Test Folders:
 This program simply breaks up a folder into train/val/test.
 
-### FR 
+### FR TL 
 
 ## Video Links:
 Comparison between the two models:
