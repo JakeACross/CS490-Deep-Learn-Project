@@ -53,8 +53,7 @@ Inside of the FR Encryption Example folder, there is a python program called: ma
 an example of encrypting a text file. This will be used as a proof of concept for the security part of
 the project.
 
-## These programs only apply to the first model, the VGG16 Transfer Learning model created with the
-## 'New Faces' dataset.
+## These programs only apply to the first model, the VGG16 Transfer Learning model created with the 'New Faces' dataset.
 
 ### FR Keras Pretrained Model Transfer Learning:
 This model is our first model attempt for the Facial Recognition project. This model uses the VGG model
