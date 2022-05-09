@@ -28,7 +28,9 @@ test data as validation data. This model would be saved to the user's machine.
 ### FR Image Folders to Train_Test Folders:
 This program simply breaks up a folder into train/val/test.
 
-### FR TL 
+### FR TL Video Capture Example:
+This program mirrors the main jupyter notebook file, but with the changes to allow the folders created during
+the first model creation (FR Keras Pretrained Model Transfer Learning) to function like the main jupyter notebook
 
 ## Video Links:
 Comparison between the two models:
