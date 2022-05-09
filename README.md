@@ -11,6 +11,9 @@
 
 ### Main Jupyter Notebook File:
 
+### OpenCV FR Dataset Generation:
+This program uses OpenCV to gather the images from the current user and saves it into the 'New Faces'
+folder.
 
 ### FR Encryption Example:
 Inside of the FR Encryption Example folder, there is a python program called: main.py. Run this to see
