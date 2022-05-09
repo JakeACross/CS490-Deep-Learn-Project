@@ -15,4 +15,19 @@ Inside of the FR Encryption Example folder, there is a python program called: ma
 an example of encrypting a text file. This will be used as a proof of concept for the security part of
 the project.
 
-### 
+### FR Keras Pretrained Model Transfer Learning:
+This model is our first model attempt for the Facial Recognition project. This model uses the VGG model
+structure from keras to transfer learn the first five blocks of the typical vgg model structure. Once this
+is done, the image dataset folders (train/test folders) are turned into the train/test data using
+ImageDataGenerator to apply normalization and other preprocessing techniques. The model is fitted to the
+train data. It has early stopping, and reduce learning rate on plateau callbacks applied, as well as the
+test data as validation data. This model would be saved to the user's machine. 
+
+### FR 
+
+## Video Links:
+Comparison between the two models:
+https://youtu.be/ckxq1IgNzdY
+
+Web application demonstration:
+https://youtu.be/uWHrqNSWvug
