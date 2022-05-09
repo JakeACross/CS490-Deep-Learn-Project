@@ -6,3 +6,5 @@
 3. Download weight data from https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view?usp=sharing
 4. Add a path of the data to <a href="https://github.com/JakeACross/CS490-Deep-Learn-Project/blob/main/Main.ipynb">Main.ipynb</a> and run
 5. Press 'q' to finish it 
+
+## Program Descriptions
