@@ -8,3 +8,11 @@
 5. Press 'q' to finish it 
 
 ## Program Descriptions
+
+
+### FR Encryption Example:
+Inside of the FR Encryption Example folder, there is a python program called: main.py. Run this to see
+an example of encrypting a text file. This will be used as a proof of concept for the security part of
+the project.
+
+### 
