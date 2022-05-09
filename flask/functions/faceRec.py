@@ -130,11 +130,11 @@ def faceRecognition(model):
                     cv2.putText(img, 'Unknown', (int(x+w+15), int(y-12)), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
                     unauthorized_matches += 1
 
-        if user_face_matches > 30:
+        if user_face_matches > 10:
             f = open('result.txt', 'w')
             f.write("Authorized")
             f.close()
-        if unauthorized_matches > 10:
+        if unauthorized_matches > 5:
             f = open('result.txt', 'w')
             f.write("Unauthorized")
             f.close()

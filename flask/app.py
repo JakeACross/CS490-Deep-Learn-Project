@@ -23,6 +23,8 @@ def makeMdl():
     
 @app.route("/faceRec")
 def faceRec():
+    f = open('result.txt', 'w+')
+    f.close()
     model = loadMdl()
     func = faceRecognition(model)
     return Response(func,
@@ -32,7 +34,7 @@ def faceRec():
 def logIn():
     f = open('result.txt', 'r')
     result = f.readline()
-    if result == "Authorized": 
+    if result == "Authorized":
         return render_template('user.html')
     else:
         return render_template('home.html')
