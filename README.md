@@ -23,6 +23,9 @@ ImageDataGenerator to apply normalization and other preprocessing techniques. Th
 train data. It has early stopping, and reduce learning rate on plateau callbacks applied, as well as the
 test data as validation data. This model would be saved to the user's machine. 
 
+### FR Image Folders to Train_Test Folders:
+This program simply breaks up a folder into train/val/test.
+
 ### FR 
 
 ## Video Links:
