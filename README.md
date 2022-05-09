@@ -1,11 +1,10 @@
 # CS490-Deep-Learn-Project
 
-## Quick Instruction
-1. Install NumPy, tensorflow and OpenCV if you have not done yet
-2. Run <a href="https://github.com/JakeACross/CS490-Deep-Learn-Project/blob/main/OpenCV%20FR%20Dataset%20Generation%20v2.ipynb">OpenCV FR Dataset Generation v2.ipynb</a> file to take pictures and save it to 'New Face' folder.
-3. Download weight data from https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view?usp=sharing
-4. Add a path of the data to <a href="https://github.com/JakeACross/CS490-Deep-Learn-Project/blob/main/Main.ipynb">Main.ipynb</a> and run
-5. Press 'q' to finish it 
+## Quick Instruction for Web Application
+1. Install NumPy, tensorflow, OpenCV and Flask if you have not done yet
+2. Download weight data from https://drive.google.com/file/d/1CPSeum3HpopfomUEK1gybeuIVoeJT_Eo/view?usp=sharing
+3. Open the Flask folder and run 
+4. The functions in the application is well explained in jupyternotebook files
 
 ## Program Descriptions
 
@@ -76,3 +75,16 @@ https://youtu.be/ckxq1IgNzdY
 
 Web application demonstration:
 https://youtu.be/uWHrqNSWvug
+
+## Reference:
+- Preprocess Image: https://github.com/keras-team/keras-applications/blob/master/keras_applications/imagenet_utils.py (Line 45)
+- VGG Model
+  - Code: https://github.com/serengil/tensorflow-101/blob/master/python/deep-face-real-time.py
+  - Structure: https://neurohive.io/en/popular-networks/vgg16/
+  - Description: https://sefiks.com/2018/08/06/deep-face-recognition-with-keras/
+- Flask
+  - Start Guide: https://flask.palletsprojects.com/en/2.0.x/quickstart/
+  - Redirect by a Button: https://kanchanardj.medium.com/redirecting-to-another-page-with-button-click-in-python-flask-c112a2a2304c
+  - Display a video (Code) : https://github.com/krishnaik06/Flask-Web-Framework
+  - Display a video (Description): https://www.youtube.com/playlist?list=PLZoTAELRMXVPBaLN3e-uoVRR9hlRFRfUc
+  
